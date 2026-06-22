@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joshua McCrary | Life Insurance &amp; Financial Strategies</title>
+<meta name="description" content="Joshua McCrary helps families protect their future with life insurance and financial strategies, and mentors new agents building a career with Global Financial Impact." />
+<style>
+  :root{
+    --navy:#0b2545;
+    --navy-2:#13315c;
+    --ink:#0d1b2a;
+    --gold:#c9a227;
+    --gold-2:#e0bc4a;
+    --slate:#56657a;
+    --mist:#f4f6fb;
+    --line:#e3e8f0;
+    --white:#ffffff;
+    --radius:16px;
+    --shadow:0 18px 45px rgba(11,37,69,.12);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;color:var(--navy)}
+  .eyebrow{font-family:"Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.18em;
+    font-size:.78rem;font-weight:700;color:var(--gold)}
+  .btn{display:inline-block;font-weight:600;border-radius:999px;padding:14px 28px;
+    transition:transform .15s ease,box-shadow .15s ease;font-family:"Segoe UI",sans-serif;cursor:pointer;border:0}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--ink)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,162,39,.4)}
+  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(11,37,69,.3)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+  .brand .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-2));
+    color:var(--gold-2);display:grid;place-items:center;font-family:Georgia,serif;font-size:1.1rem;font-weight:700}
+  .brand b{font-family:Georgia,serif;color:var(--navy);font-size:1.05rem;letter-spacing:.02em}
+  .brand span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:600}
+  nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-size:.95rem;font-weight:500}
+  nav a:hover{color:var(--gold)}
+  .nav-cta{display:inline-block}
+  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:
+      radial-gradient(1200px 500px at 80% -10%,rgba(201,162,39,.18),transparent 60%),
+      linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,#1c4076 100%);
+    color:#fff;overflow:hidden}
+  .hero:after{content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:26px 26px;opacity:.5;pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;
+    padding:90px 0 100px;position:relative;z-index:2}
+  .hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);margin:18px 0 18px}
+  .hero h1 em{color:var(--gold-2);font-style:normal}
+  .hero p.lead{font-size:1.15rem;color:#d8e2f2;max-width:560px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:.9rem;color:#aebfd8}
+  .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+    border-radius:20px;padding:30px;backdrop-filter:blur(6px)}
+  .hero-card h3{color:#fff;font-size:1.15rem;margin-bottom:18px}
+  .stat-row{display:flex;flex-direction:column;gap:18px}
+  .stat{display:flex;align-items:baseline;gap:12px}
+  .stat .n{font-family:Georgia,serif;font-size:1.9rem;color:var(--gold-2);font-weight:700;min-width:96px}
+  .stat .l{font-size:.92rem;color:#cdd9ec}
+
+  /* SECTION BASE */
+  section{padding:84px 0}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:12px 0}
+  .section-head p{color:var(--slate);font-size:1.08rem}
+
+  /* AUDIENCE SPLIT */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .path{border:1px solid var(--line);border-radius:var(--radius);padding:34px;background:var(--white);
+    box-shadow:var(--shadow);transition:transform .18s ease}
+  .path:hover{transform:translateY(-4px)}
+  .path .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;margin-bottom:16px}
+  .path.fam .tag{background:#eaf2ff;color:var(--navy-2)}
+  .path.team .tag{background:#fbf3da;color:#8a6d12}
+  .path h3{font-size:1.5rem;margin-bottom:10px}
+  .path p{color:var(--slate);margin-bottom:18px}
+  .path ul{list-style:none;margin-bottom:24px}
+  .path li{padding:8px 0 8px 30px;position:relative;color:var(--ink)}
+  .path li:before{content:"✓";position:absolute;left:0;top:8px;color:var(--gold);font-weight:700}
+
+  /* ABOUT */
+  .about{background:var(--mist)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:20px;background:
+      linear-gradient(160deg,var(--navy),var(--navy-2));position:relative;overflow:hidden;
+      box-shadow:var(--shadow);display:grid;place-items:center;color:#22436f}
+  .portrait .initials{font-family:Georgia,serif;font-size:5rem;color:rgba(224,188,74,.35);font-weight:700}
+  .portrait .ph{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:.78rem;
+    color:#9fb4d6;font-family:"Segoe UI",sans-serif;letter-spacing:.04em}
+  .about-grid h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:12px 0 18px}
+  .about-grid p{color:var(--slate);margin-bottom:16px}
+  .creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+  .cred{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.92rem}
+  .cred b{display:block;color:var(--navy);font-family:Georgia,serif;font-size:1.3rem}
+
+  /* SERVICES */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.18s ease;background:#fff}
+  .card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-4px)}
+  .card .ico{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#eef3fc,#dde7f7);
+    display:grid;place-items:center;margin-bottom:18px;font-size:1.5rem}
+  .card h3{font-size:1.2rem;margin-bottom:8px}
+  .card p{color:var(--slate);font-size:.97rem}
+
+  /* RECRUIT BANNER */
+  .recruit{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff}
+  .recruit .section-head h2{color:#fff}
+  .recruit .section-head p{color:#cdd9ec}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:10px}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px}
+  .step .num{font-family:Georgia,serif;color:var(--gold-2);font-size:1.6rem;font-weight:700;margin-bottom:8px}
+  .step h4{color:#fff;font-size:1.05rem;margin-bottom:6px;font-family:"Segoe UI",sans-serif}
+  .step p{color:#bccbe3;font-size:.92rem}
+  .recruit-cta{text-align:center;margin-top:42px}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  .contact-info p{color:var(--slate);margin-bottom:22px}
+  .contact-list{list-style:none}
+  .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+  .contact-list .ci{font-size:1.2rem}
+  .contact-list b{display:block;color:var(--navy)}
+  .contact-list span{color:var(--slate);font-size:.95rem}
+  form{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--navy)}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+    font-family:inherit;font-size:.97rem;background:#fff}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
+  textarea{resize:vertical;min-height:110px}
+  form .btn{width:100%;margin-top:6px}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#c3cfe2;padding:50px 0 28px;font-size:.92rem}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:28px}
+  .foot-brand b{font-family:Georgia,serif;color:#fff;font-size:1.1rem}
+  footer a:hover{color:var(--gold-2)}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .disclaimer{border-top:1px solid #233;padding-top:20px;font-size:.78rem;color:#7e8ba1;line-height:1.6}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .paths{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    nav ul{display:none}
+    .menu-btn{display:block}
+    nav.open ul{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;
+      background:#fff;padding:18px 24px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow)}
+    nav.open ul .nav-cta{align-self:flex-start}
+  }
+  @media(max-width:560px){
+    .cards,.steps{grid-template-columns:1fr}
+    section{padding:60px 0}
+    .hero-grid{padding:60px 0 70px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="mark">JM</span>
+      <span><b>Joshua McCrary</b><span>Life Insurance &amp; Financial Strategies</span></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#paths">Get Started</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#join">Join My Team</a></li>
+        <li class="nav-cta"><a class="btn btn-gold" href="#contact">Book a Call</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Powered by Global Financial Impact</p>
+      <h1>Protect what matters. <em>Build a future</em> worth dreaming about.</h1>
+      <p class="lead">I help families secure the right life insurance and financial strategies &mdash; and I mentor motivated people who want to build a career helping others do the same.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#contact">Get a Free Consultation</a>
+        <a class="btn btn-ghost" href="#join">Become an Agent</a>
+      </div>
+      <p class="hero-note">Licensed life insurance professional &middot; Serving families nationwide</p>
+    </div>
+    <aside class="hero-card">
+      <h3>Why families work with me</h3>
+      <div class="stat-row">
+        <div class="stat"><span class="n">23+</span><span class="l">Insurance carriers compared to find your best fit</span></div>
+        <div class="stat"><span class="n">100%</span><span class="l">Personalized, no-pressure financial reviews</span></div>
+        <div class="stat"><span class="n">$0</span><span class="l">Cost for an initial strategy consultation</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- PATHS -->
+<section id="paths">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Two ways I can help</p>
+      <h2>Where would you like to start?</h2>
+      <p>Whether you're protecting your family or building a new career, there's a clear next step for you.</p>
+    </div>
+    <div class="paths">
+      <div class="path fam">
+        <span class="tag">For families &amp; individuals</span>
+        <h3>I need life insurance &amp; a financial plan</h3>
+        <p>Get a clear, honest look at where you stand and the coverage that actually fits your budget and goals.</p>
+        <ul>
+          <li>Term &amp; permanent life insurance options</li>
+          <li>Retirement &amp; income protection strategies</li>
+          <li>Coverage compared across 23+ carriers</li>
+        </ul>
+        <a class="btn btn-navy" href="#contact">Book a free review</a>
+      </div>
+      <div class="path team">
+        <span class="tag">For aspiring agents</span>
+        <h3>I want to build a career or side income</h3>
+        <p>Learn how to get licensed, serve clients, and grow a business with mentorship and a proven platform behind you.</p>
+        <ul>
+          <li>Step-by-step licensing &amp; training support</li>
+          <li>Flexible, performance-based income</li>
+          <li>Mentorship from an active producer</li>
+        </ul>
+        <a class="btn btn-gold" href="#join">Explore the opportunity</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait">
+      <span class="initials">JM</span>
+      <span class="ph">[ Add Joshua's professional photo here ]</span>
+    </div>
+    <div>
+      <p class="eyebrow">About Joshua</p>
+      <h2>A trusted partner in protecting your family's future</h2>
+      <p>Joshua McCrary is a financial services professional with Global Financial Impact, where he helps individuals and families build lasting financial security through life insurance and smart, straightforward financial strategies.</p>
+      <p>His approach is simple: listen first, educate honestly, and recommend only what genuinely fits each family's situation. Beyond serving clients, Joshua mentors and develops new agents &mdash; helping driven people launch meaningful careers in financial services.</p>
+      <div class="creds">
+        <div class="cred"><b>Life</b>Licensed Insurance Professional</div>
+        <div class="cred"><b>GFI</b>Global Financial Impact</div>
+        <div class="cred"><b>23+</b>Carrier Partnerships</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">How I help</p>
+      <h2>Financial solutions built around your life</h2>
+      <p>Clear guidance and the right products to protect your income, your family, and your future.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">🛡️</div>
+        <h3>Life Insurance</h3>
+        <p>Term and permanent coverage that protects your loved ones and fits your budget &mdash; compared across many top carriers.</p>
+      </div>
+      <div class="card">
+        <div class="ico">📈</div>
+        <h3>Retirement &amp; Savings</h3>
+        <p>Strategies designed to help your money grow and provide reliable income when you need it most.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🏠</div>
+        <h3>Income Protection</h3>
+        <p>Plans that help safeguard your family's lifestyle and obligations if the unexpected happens.</p>
+      </div>
+      <div class="card">
+        <div class="ico">👨‍👩‍👧</div>
+        <h3>Family &amp; Mortgage Protection</h3>
+        <p>Make sure your home and your children's future are covered, no matter what comes next.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🎓</div>
+        <h3>Financial Education</h3>
+        <p>No jargon, no pressure &mdash; just clear answers so you can make confident decisions.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🤝</div>
+        <h3>Ongoing Reviews</h3>
+        <p>Your plan grows with you. We revisit your coverage as life changes to keep it working hard for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN / RECRUIT -->
+<section class="recruit" id="join">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Build a career with me</p>
+      <h2>Become a financial services agent</h2>
+      <p>If you're motivated, coachable, and want to help people while building real income, I'll show you the path &mdash; from licensing to your first clients and beyond.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h4>Connect</h4><p>Book a no-obligation call to see if it's the right fit for your goals.</p></div>
+      <div class="step"><div class="num">02</div><h4>Get Licensed</h4><p>Follow a clear, supported process to become a licensed agent.</p></div>
+      <div class="step"><div class="num">03</div><h4>Train &amp; Launch</h4><p>Learn the products, the process, and how to serve clients with confidence.</p></div>
+      <div class="step"><div class="num">04</div><h4>Grow</h4><p>Build your client base and team with ongoing mentorship and support.</p></div>
+    </div>
+    <div class="recruit-cta">
+      <a class="btn btn-gold" href="#contact">Start the conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's talk &mdash; it's free and there's no pressure</h2>
+      <p>Tell me a little about what you're looking for and I'll reach out to set up a time.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Reach out directly or send a message and I'll get back to you within one business day.</p>
+        <ul class="contact-list">
+          <li><span class="ci">📞</span><div><b>Phone</b><span>[ Add phone number ]</span></div></li>
+          <li><span class="ci">✉️</span><div><b>Email</b><span>[ Add email address ]</span></div></li>
+          <li><span class="ci">📅</span><div><b>Schedule</b><span>[ Add Calendly / booking link ]</span></div></li>
+          <li><span class="ci">📍</span><div><b>Serving</b><span>Families nationwide &middot; Global Financial Impact</span></div></li>
+        </ul>
+      </div>
+      <form onsubmit="handleSubmit(event)">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="jane@email.com" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
+        </div>
+        <div class="field">
+          <label for="reason">I'm interested in</label>
+          <select id="reason" name="reason">
+            <option>Life insurance / financial review</option>
+            <option>Becoming an agent</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" placeholder="A few words about what you're looking for..."></textarea>
+        </div>
+        <button class="btn btn-gold" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Joshua McCrary</b>
+        <p style="margin-top:6px">Life Insurance &amp; Financial Strategies<br/>Powered by Global Financial Impact</p>
+      </div>
+      <div class="foot-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#join">Join My Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="disclaimer">
+      &copy; <span id="yr"></span> Joshua McCrary. All rights reserved. Joshua McCrary is an independent licensed insurance professional affiliated with Global Financial Impact (GFI).
+      This website is for general informational purposes only and does not constitute financial, tax, or legal advice. Insurance products are subject to eligibility, underwriting, and approval; product availability and features vary by state and carrier. Income as an agent is not guaranteed and depends on individual effort, licensing, and results. Please replace bracketed placeholders with your verified contact details and any required state-specific disclosures or license numbers before publishing.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  document.getElementById('menuBtn').addEventListener('click', function(){ nav.classList.toggle('open'); });
+  nav.addEventListener('click', function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+  function handleSubmit(e){
+    e.preventDefault();
+    alert("Thanks! Your message is ready to send.\n\nNote: connect this form to email or a form service (e.g. Formspree) before going live so submissions reach Joshua.");
+  }
+</script>
+</body>
+</html>
