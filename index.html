@@ -3,164 +3,180 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Joshua McCrary | Life Insurance &amp; Financial Strategies</title>
-<meta name="description" content="Joshua McCrary helps families protect their future with life insurance and financial strategies, and mentors new agents building a career with Pacific Ridgeway Insurance." />
+<title>Joshua McCrary | Pacific Ridgeway Insurance</title>
+<meta name="description" content="Joshua McCrary helps families protect, grow, and distribute wealth with life insurance and financial strategies — and mentors new advisors with Pacific Ridgeway Insurance." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --navy:#0b2545;
-    --navy-2:#13315c;
-    --ink:#0d1b2a;
-    --gold:#c9a227;
-    --gold-2:#e0bc4a;
-    --slate:#56657a;
-    --mist:#f4f6fb;
-    --line:#e3e8f0;
+    --navy:#082B63;          /* Pacific Ridgeway navy */
+    --navy-700:#0d3a7e;
+    --navy-900:#051d45;
+    --gold:#D4A12B;          /* Pacific Ridgeway gold */
+    --gold-soft:#e6bb59;
+    --ink:#0f1b2d;
+    --slate:#5c6b82;
+    --gray:#F5F7FA;          /* Pacific Ridgeway gray */
+    --line:#e7ebf2;
     --white:#ffffff;
-    --radius:16px;
-    --shadow:0 18px 45px rgba(11,37,69,.12);
-    --maxw:1120px;
+    --r:22px;
+    --shadow:0 24px 60px rgba(8,43,99,.10);
+    --shadow-sm:0 8px 24px rgba(8,43,99,.07);
+    --maxw:1160px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;
-  }
+  body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;color:var(--navy)}
-  .eyebrow{font-family:"Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.18em;
-    font-size:.78rem;font-weight:700;color:var(--gold)}
-  .btn{display:inline-block;font-weight:600;border-radius:999px;padding:14px 28px;
-    transition:transform .15s ease,box-shadow .15s ease;font-family:"Segoe UI",sans-serif;cursor:pointer;border:0}
-  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--ink)}
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,162,39,.4)}
-  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.55)}
-  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  h1,h2{font-family:"Playfair Display",Georgia,serif;color:var(--navy);font-weight:800;line-height:1.12;letter-spacing:-.01em}
+  h3,h4{font-family:"Inter",sans-serif;color:var(--navy);font-weight:700;line-height:1.15;letter-spacing:-.02em}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;font-weight:700;color:var(--gold)}
+  .stars{letter-spacing:.35em;color:var(--gold);font-size:.8rem}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;border-radius:999px;padding:15px 30px;
+    cursor:pointer;border:0;transition:transform .16s ease,box-shadow .16s ease,background .16s ease;font-size:1rem;font-family:inherit}
+  .btn-gold{background:var(--gold);color:var(--navy-900);font-weight:700}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(212,161,43,.38)}
   .btn-navy{background:var(--navy);color:#fff}
-  .btn-navy:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(11,37,69,.3)}
+  .btn-navy:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(8,43,99,.3)}
+  .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid #cfd8e8}
+  .btn-ghost:hover{border-color:var(--navy);background:#fff}
+  .btn-ghost.light{color:#fff;border-color:rgba(255,255,255,.5)}
+  .btn-ghost.light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+  /* mountain mark */
+  .prm{width:42px;height:auto;flex:none}
 
   /* NAV */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-  .brand .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-2));
-    color:var(--gold-2);display:grid;place-items:center;font-family:Georgia,serif;font-size:1.1rem;font-weight:700}
-  .brand b{font-family:Georgia,serif;color:var(--navy);font-size:1.05rem;letter-spacing:.02em}
-  .brand span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:600}
-  nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-size:.95rem;font-weight:500}
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);
+    backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .txt b{display:block;font-weight:800;color:var(--navy);font-size:1.02rem;letter-spacing:-.02em;line-height:1.1}
+  .brand .txt span{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--slate);font-weight:600;margin-top:2px}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center;font-size:.95rem;font-weight:500}
   nav a:hover{color:var(--gold)}
-  .nav-cta{display:inline-block}
   .menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
 
-  /* HERO */
-  .hero{position:relative;background:
-      radial-gradient(1200px 500px at 80% -10%,rgba(201,162,39,.18),transparent 60%),
-      linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,#1c4076 100%);
-    color:#fff;overflow:hidden}
-  .hero:after{content:"";position:absolute;inset:0;
-    background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);
-    background-size:26px 26px;opacity:.5;pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;
-    padding:90px 0 100px;position:relative;z-index:2}
-  .hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);margin:18px 0 18px}
-  .hero h1 em{color:var(--gold-2);font-style:normal}
-  .hero p.lead{font-size:1.15rem;color:#d8e2f2;max-width:560px;margin-bottom:32px}
-  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-  .hero-note{margin-top:26px;font-size:.9rem;color:#aebfd8}
-  .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
-    border-radius:20px;padding:30px;backdrop-filter:blur(6px)}
-  .hero-card h3{color:#fff;font-size:1.15rem;margin-bottom:18px}
-  .stat-row{display:flex;flex-direction:column;gap:18px}
-  .stat{display:flex;align-items:baseline;gap:12px}
-  .stat .n{font-family:Georgia,serif;font-size:1.9rem;color:var(--gold-2);font-weight:700;min-width:96px}
-  .stat .l{font-size:.92rem;color:#cdd9ec}
+  /* HERO — photographic mountain style (à la pacificridgeway.com) */
+  .hero{position:relative;overflow:hidden;color:#fff;min-height:90vh;display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg svg{width:100%;height:100%;display:block}
+  /* To use a real licensed photo, uncomment the .hero-photo div in the HTML and set its background-image. */
+  .hero-photo{position:absolute;inset:0;z-index:1;background-size:cover;background-position:center}
+  .hero-overlay{position:absolute;inset:0;z-index:2;background:
+     linear-gradient(90deg,rgba(6,14,38,.80) 0%,rgba(6,14,38,.46) 44%,rgba(6,14,38,.10) 72%),
+     linear-gradient(0deg,rgba(6,14,38,.5),rgba(6,14,38,0) 42%)}
+  .hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center;padding:104px 0;width:100%}
+  .badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);
+     color:#fff;padding:9px 18px;border-radius:999px;font-size:.82rem;font-weight:600;backdrop-filter:blur(6px)}
+  .badge .s{color:var(--gold-soft)}
+  .hero h1{color:#fff;font-size:clamp(2.7rem,6.2vw,4.7rem);margin:22px 0 18px;line-height:1.04;text-shadow:0 2px 34px rgba(0,0,0,.3)}
+  .hero h1 em{display:block;color:var(--gold);font-style:italic}
+  .hero p.lead{font-size:1.16rem;color:#e7ecf6;max-width:540px;margin-bottom:30px;font-weight:450}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:22px;font-size:.9rem;color:#cdd6e8}
+  .stat-cards{display:flex;gap:18px;justify-content:flex-end;flex-wrap:wrap}
+  .stat-card{background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.6);
+     border-radius:20px;padding:28px 30px;min-width:172px;box-shadow:0 24px 60px rgba(6,14,38,.4)}
+  .stat-card .n{font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:800;color:var(--navy);line-height:1}
+  .stat-card .u{width:36px;height:3px;background:var(--gold);border-radius:3px;margin:13px 0}
+  .stat-card .l{font-size:.9rem;color:var(--slate);font-weight:500}
+  .range{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:200px;z-index:1;display:block}
 
-  /* SECTION BASE */
-  section{padding:84px 0}
-  .section-head{max-width:680px;margin-bottom:46px}
-  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-  .section-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:12px 0}
-  .section-head p{color:var(--slate);font-size:1.08rem}
+  section{padding:96px 0}
+  .section-head{max-width:680px;margin:0 auto 52px;text-align:center}
+  .section-head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin:14px 0}
+  .section-head p{color:var(--slate);font-size:1.1rem}
 
-  /* AUDIENCE SPLIT */
+  /* PATHS */
   .paths{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-  .path{border:1px solid var(--line);border-radius:var(--radius);padding:34px;background:var(--white);
-    box-shadow:var(--shadow);transition:transform .18s ease}
-  .path:hover{transform:translateY(-4px)}
+  .path{border:1px solid var(--line);border-radius:var(--r);padding:38px;background:#fff;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
+  .path:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
   .path .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    padding:6px 12px;border-radius:999px;margin-bottom:16px}
-  .path.fam .tag{background:#eaf2ff;color:var(--navy-2)}
-  .path.team .tag{background:#fbf3da;color:#8a6d12}
-  .path h3{font-size:1.5rem;margin-bottom:10px}
-  .path p{color:var(--slate);margin-bottom:18px}
-  .path ul{list-style:none;margin-bottom:24px}
-  .path li{padding:8px 0 8px 30px;position:relative;color:var(--ink)}
-  .path li:before{content:"✓";position:absolute;left:0;top:8px;color:var(--gold);font-weight:700}
+    padding:7px 14px;border-radius:999px;margin-bottom:18px}
+  .path.fam .tag{background:#eaf1ff;color:var(--navy)}
+  .path.team .tag{background:#fbf1d8;color:#977017}
+  .path h3{font-size:1.55rem;margin-bottom:12px}
+  .path p{color:var(--slate);margin-bottom:20px}
+  .path ul{list-style:none;margin-bottom:26px}
+  .path li{padding:9px 0 9px 32px;position:relative;color:var(--ink)}
+  .path li:before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border-radius:50%;
+    background:var(--gold);box-shadow:inset 0 0 0 4px #fff,0 0 0 1px var(--gold)}
 
   /* ABOUT */
-  .about{background:var(--mist)}
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
-  .portrait{aspect-ratio:4/5;border-radius:20px;background:
-      linear-gradient(160deg,var(--navy),var(--navy-2));position:relative;overflow:hidden;
-      box-shadow:var(--shadow);display:grid;place-items:center;color:#22436f}
-  .portrait .initials{font-family:Georgia,serif;font-size:5rem;color:rgba(224,188,74,.35);font-weight:700}
-  .portrait .ph{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:.78rem;
-    color:#9fb4d6;font-family:"Segoe UI",sans-serif;letter-spacing:.04em}
-  .about-grid h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:12px 0 18px}
+  .about{background:var(--gray)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:26px;position:relative;overflow:hidden;box-shadow:var(--shadow);
+    background:linear-gradient(165deg,var(--navy),var(--navy-700))}
+  .portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  .portrait .mono{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:5rem;color:rgba(212,161,43,.34)}
+  .portrait .ph{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:.76rem;color:#9fb4d6;letter-spacing:.04em}
+  .portrait .pkrange{position:absolute;left:0;right:0;bottom:0;width:100%;height:90px;opacity:.5}
+  .about-grid h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin:14px 0 20px}
   .about-grid p{color:var(--slate);margin-bottom:16px}
-  .creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
-  .cred{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.92rem}
-  .cred b{display:block;color:var(--navy);font-family:Georgia,serif;font-size:1.3rem}
+  .creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+  .cred{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;font-size:.9rem;color:var(--slate)}
+  .cred b{display:block;color:var(--navy);font-weight:800;font-size:1.25rem;margin-bottom:2px}
 
   /* SERVICES */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.18s ease;background:#fff}
-  .card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-4px)}
-  .card .ico{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#eef3fc,#dde7f7);
-    display:grid;place-items:center;margin-bottom:18px;font-size:1.5rem}
-  .card h3{font-size:1.2rem;margin-bottom:8px}
+  .card{border:1px solid var(--line);border-radius:var(--r);padding:32px;background:#fff;transition:.2s ease}
+  .card:hover{border-color:#d8e0ee;box-shadow:var(--shadow);transform:translateY(-6px)}
+  .card .ico{width:56px;height:56px;border-radius:16px;background:var(--navy);color:var(--gold);
+    display:grid;place-items:center;margin-bottom:20px}
+  .card .ico svg{width:28px;height:28px}
+  .card h3{font-size:1.22rem;margin-bottom:9px}
   .card p{color:var(--slate);font-size:.97rem}
 
-  /* RECRUIT BANNER */
-  .recruit{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff}
+  /* RECRUIT */
+  .recruit{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--navy-900),var(--navy) 70%);color:#fff}
   .recruit .section-head h2{color:#fff}
-  .recruit .section-head p{color:#cdd9ec}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:10px}
-  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px}
-  .step .num{font-family:Georgia,serif;color:var(--gold-2);font-size:1.6rem;font-weight:700;margin-bottom:8px}
-  .step h4{color:#fff;font-size:1.05rem;margin-bottom:6px;font-family:"Segoe UI",sans-serif}
-  .step p{color:#bccbe3;font-size:.92rem}
-  .recruit-cta{text-align:center;margin-top:42px}
+  .recruit .section-head p{color:#bccbe6}
+  .recruit .eyebrow{color:var(--gold-soft)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;z-index:2}
+  .step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:26px;backdrop-filter:blur(4px)}
+  .step .num{color:var(--gold-soft);font-size:1.7rem;font-weight:900;margin-bottom:10px;letter-spacing:-.03em}
+  .step h4{color:#fff;font-size:1.08rem;margin-bottom:8px;font-weight:700}
+  .step p{color:#b9c8e2;font-size:.93rem}
+  .recruit-cta{text-align:center;margin-top:46px;position:relative;z-index:2}
+  .recruit .range{height:160px;opacity:.5}
 
   /* CONTACT */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
-  .contact-info p{color:var(--slate);margin-bottom:22px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .contact-info p.intro{color:var(--slate);margin-bottom:24px;font-size:1.05rem}
   .contact-list{list-style:none}
-  .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
-  .contact-list .ci{font-size:1.2rem}
-  .contact-list b{display:block;color:var(--navy)}
+  .contact-list li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+  .contact-list .ci{width:44px;height:44px;border-radius:13px;background:var(--gray);color:var(--navy);display:grid;place-items:center;flex:none}
+  .contact-list .ci svg{width:21px;height:21px}
+  .contact-list b{display:block;color:var(--navy);font-weight:700;margin-bottom:2px}
   .contact-list span{color:var(--slate);font-size:.95rem}
-  form{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
-  .field{margin-bottom:16px}
-  label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--navy)}
-  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
-    font-family:inherit;font-size:.97rem;background:#fff}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
-  textarea{resize:vertical;min-height:110px}
-  form .btn{width:100%;margin-top:6px}
+  .contact-list a{color:var(--navy);font-weight:600}
+  .contact-list a:hover{color:var(--gold)}
+  form{background:var(--gray);border:1px solid var(--line);border-radius:var(--r);padding:34px}
+  .field{margin-bottom:17px}
+  label{display:block;font-size:.84rem;font-weight:600;margin-bottom:7px;color:var(--navy)}
+  input,select,textarea{width:100%;padding:13px 15px;border:1px solid #dde3ee;border-radius:13px;
+    font-family:inherit;font-size:.97rem;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,161,43,.18)}
+  textarea{resize:vertical;min-height:112px}
+  form .btn{width:100%;margin-top:6px;justify-content:center}
+  .form-status{margin-top:14px;font-size:.92rem;font-weight:600;text-align:center;min-height:1.2em}
+  .form-status.ok{color:#1b7a43}.form-status.err{color:#b3261e}.form-status.info{color:var(--slate)}
 
   /* FOOTER */
-  footer{background:var(--ink);color:#c3cfe2;padding:50px 0 28px;font-size:.92rem}
-  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:28px}
-  .foot-brand b{font-family:Georgia,serif;color:#fff;font-size:1.1rem}
-  footer a:hover{color:var(--gold-2)}
-  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
-  .disclaimer{border-top:1px solid #233;padding-top:20px;font-size:.78rem;color:#7e8ba1;line-height:1.6}
+  footer{position:relative;overflow:hidden;background:var(--navy-900);color:#c3cfe2;padding:70px 0 30px;font-size:.92rem}
+  .foot-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin-bottom:30px;position:relative;z-index:2}
+  .foot-brand{display:flex;align-items:center;gap:13px;margin-bottom:10px}
+  .foot-brand b{color:#fff;font-weight:800;font-size:1.1rem}
+  .foot-links{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+  footer a:hover{color:var(--gold-soft)}
+  .disclaimer{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.78rem;color:#8595b0;line-height:1.65;position:relative;z-index:2}
+  .foot-range{position:absolute;left:0;right:0;top:0;width:100%;height:120px;opacity:.4}
 
-  /* RESPONSIVE */
   @media(max-width:900px){
     .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
     .paths{grid-template-columns:1fr}
@@ -168,25 +184,44 @@
     .steps{grid-template-columns:1fr 1fr}
     nav ul{display:none}
     .menu-btn{display:block}
-    nav.open ul{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;
-      background:#fff;padding:18px 24px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow)}
-    nav.open ul .nav-cta{align-self:flex-start}
+    nav.open ul{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;
+      background:#fff;padding:20px 26px;border-bottom:1px solid var(--line);gap:16px;box-shadow:var(--shadow)}
   }
-  @media(max-width:560px){
-    .cards,.steps{grid-template-columns:1fr}
-    section{padding:60px 0}
-    .hero-grid{padding:60px 0 70px}
-  }
+  @media(max-width:560px){.cards,.steps{grid-template-columns:1fr}section{padding:64px 0}.hero{padding-bottom:120px}}
+
+  .prm{height:48px;width:auto}
+  .brand .txt b{font-family:"Playfair Display",Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.12rem;line-height:1.05}
+  .brand .txt span{font-size:.62rem;letter-spacing:.16em;margin-top:3px}
+  .foot-brand b{font-family:"Playfair Display",Georgia,serif;text-transform:uppercase;letter-spacing:.05em}
 </style>
 </head>
 <body>
+
+<!-- reusable mountain range (decorative) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="range" viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,200 L0,150 L150,90 L300,140 L470,70 L640,135 L820,55 L1010,130 L1180,80 L1320,120 L1440,90 L1440,200 Z" fill="#dde5f1"/>
+      <path d="M0,200 L0,170 L180,120 L340,165 L520,105 L720,160 L920,95 L1120,155 L1300,115 L1440,150 L1440,200 Z" fill="#c6d2e6"/>
+    </symbol>
+    <symbol id="rangeDark" viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,200 L0,150 L150,90 L300,140 L470,70 L640,135 L820,55 L1010,130 L1180,80 L1320,120 L1440,90 L1440,200 Z" fill="#0a2f6c"/>
+      <path d="M0,200 L0,170 L180,120 L340,165 L520,105 L720,160 L920,95 L1120,155 L1300,115 L1440,150 L1440,200 Z" fill="#06224f"/>
+    </symbol>
+  </defs>
+</svg>
 
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <span class="mark">JM</span>
-      <span><b>Joshua McCrary</b><span>Life Insurance &amp; Financial Strategies</span></span>
+      <svg class="prm" viewBox="0 0 84 60" aria-hidden="true">
+        <path d="M4 56 L24 20 L33 33 L46 8 L60 30 L69 20 L80 56 Z" fill="#082B63"/>
+        <path d="M46 8 L51 16 L48 17.5 L46 13 L44 17.5 L41 16 Z" fill="#fff"/>
+        <path d="M24 20 L28.5 27 L26 28.5 L24 24.5 L22 28.5 L19.5 27 Z" fill="#fff"/>
+        <path d="M69 20 L73.5 27 L71 28.5 L69 24.5 L67 28.5 L64.5 27 Z" fill="#fff"/>
+      </svg>
+      <span class="txt"><b>Pacific Ridgeway</b><span>Joshua McCrary</span></span>
     </a>
     <nav id="nav">
       <ul>
@@ -194,7 +229,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#join">Join My Team</a></li>
-        <li class="nav-cta"><a class="btn btn-gold" href="#contact">Book a Call</a></li>
+        <li><a class="btn btn-gold" href="#contact">Book a Call</a></li>
       </ul>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
@@ -202,33 +237,32 @@
 </header>
 
 <!-- HERO -->
-<section class="hero" id="top" style="padding:0">
+<section class="hero" id="top">
+  <!-- Real mountain photo (Unsplash, free to use). Swap the URL to use a different/your own image. -->
+  <div class="hero-photo" style="background-color:#16203c;background-image:url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=2000&q=80')"></div>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Pacific Ridgeway Insurance</p>
-      <h1>Protect what matters. <em>Build a future</em> worth dreaming about.</h1>
-      <p class="lead">I help families secure the right life insurance and financial strategies &mdash; and I mentor motivated people who want to build a career helping others do the same.</p>
+      <span class="badge"><span class="s">✦</span> Independent Insurance Specialist</span>
+      <h1>Protecting your family's <em>Legacy</em></h1>
+      <p class="lead">I help families protect, grow, and distribute wealth with the right life insurance and financial strategies &mdash; comprehensive, honest guidance, all under one roof.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#contact">Get a Free Consultation</a>
-        <a class="btn btn-ghost" href="#join">Become an Agent</a>
+        <a class="btn btn-gold" href="#contact">Get My Free Consultation</a>
+        <a class="btn btn-ghost light" href="#services">See All Services</a>
       </div>
       <p class="hero-note">Licensed life insurance professional &middot; Serving families nationwide</p>
     </div>
-    <aside class="hero-card">
-      <h3>Why families work with me</h3>
-      <div class="stat-row">
-        <div class="stat"><span class="n">23+</span><span class="l">Insurance carriers compared to find your best fit</span></div>
-        <div class="stat"><span class="n">100%</span><span class="l">Personalized, no-pressure financial reviews</span></div>
-        <div class="stat"><span class="n">$0</span><span class="l">Cost for an initial strategy consultation</span></div>
-      </div>
-    </aside>
+    <div class="stat-cards">
+      <div class="stat-card"><div class="n">23+</div><div class="u"></div><div class="l">Carriers compared for your best fit</div></div>
+      <div class="stat-card"><div class="n">100%</div><div class="u"></div><div class="l">Personalized, no-pressure reviews</div></div>
+    </div>
   </div>
 </section>
 
 <!-- PATHS -->
 <section id="paths">
   <div class="wrap">
-    <div class="section-head center">
+    <div class="section-head">
       <p class="eyebrow">Two ways I can help</p>
       <h2>Where would you like to start?</h2>
       <p>Whether you're protecting your family or building a new career, there's a clear next step for you.</p>
@@ -246,7 +280,7 @@
         <a class="btn btn-navy" href="#contact">Book a free review</a>
       </div>
       <div class="path team">
-        <span class="tag">For aspiring agents</span>
+        <span class="tag">For aspiring advisors</span>
         <h3>I want to build a career or side income</h3>
         <p>Learn how to get licensed, serve clients, and grow a business with mentorship and a proven platform behind you.</p>
         <ul>
@@ -264,14 +298,22 @@
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="portrait">
-      <span class="initials">JM</span>
+      <!-- ====================================================================
+           TO ADD JOSHUA'S PHOTO:
+           1. Upload his headshot to the repo (e.g. "joshua.jpg").
+           2. Uncomment the <img> line below and match the filename.
+           A 4:5 portrait (~800x1000px) looks best.
+      ===================================================================== -->
+      <!-- <img src="joshua.jpg" alt="Joshua McCrary, Pacific Ridgeway Insurance" /> -->
+      <div class="mono">JM</div>
+      <svg class="pkrange"><use href="#rangeDark"/></svg>
       <span class="ph">[ Add Joshua's professional photo here ]</span>
     </div>
     <div>
       <p class="eyebrow">About Joshua</p>
       <h2>A trusted partner in protecting your family's future</h2>
       <p>Joshua McCrary is a financial services professional with Pacific Ridgeway Insurance, where he helps individuals and families build lasting financial security through life insurance and smart, straightforward financial strategies.</p>
-      <p>His approach is simple: listen first, educate honestly, and recommend only what genuinely fits each family's situation. Beyond serving clients, Joshua mentors and develops new agents &mdash; helping driven people launch meaningful careers in financial services.</p>
+      <p>His approach is simple: listen first, educate honestly, and recommend only what genuinely fits each family's situation. Beyond serving clients, Joshua mentors and develops new advisors &mdash; helping driven people launch meaningful careers in financial services.</p>
       <div class="creds">
         <div class="cred"><b>Life</b>Licensed Insurance Professional</div>
         <div class="cred"><b>PRI</b>Pacific Ridgeway Insurance</div>
@@ -284,39 +326,39 @@
 <!-- SERVICES -->
 <section id="services">
   <div class="wrap">
-    <div class="section-head center">
+    <div class="section-head">
       <p class="eyebrow">How I help</p>
       <h2>Financial solutions built around your life</h2>
       <p>Clear guidance and the right products to protect your income, your family, and your future.</p>
     </div>
     <div class="cards">
       <div class="card">
-        <div class="ico">🛡️</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Life Insurance</h3>
         <p>Term and permanent coverage that protects your loved ones and fits your budget &mdash; compared across many top carriers.</p>
       </div>
       <div class="card">
-        <div class="ico">📈</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
         <h3>Retirement &amp; Savings</h3>
         <p>Strategies designed to help your money grow and provide reliable income when you need it most.</p>
       </div>
       <div class="card">
-        <div class="ico">🏠</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg></div>
         <h3>Income Protection</h3>
         <p>Plans that help safeguard your family's lifestyle and obligations if the unexpected happens.</p>
       </div>
       <div class="card">
-        <div class="ico">👨‍👩‍👧</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 21v-1a5 5 0 0 1 5-5h2"/><circle cx="17" cy="10" r="2.5"/><path d="M14 21v-1a4 4 0 0 1 4-4"/></svg></div>
         <h3>Family &amp; Mortgage Protection</h3>
         <p>Make sure your home and your children's future are covered, no matter what comes next.</p>
       </div>
       <div class="card">
-        <div class="ico">🎓</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div>
         <h3>Financial Education</h3>
         <p>No jargon, no pressure &mdash; just clear answers so you can make confident decisions.</p>
       </div>
       <div class="card">
-        <div class="ico">🤝</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
         <h3>Ongoing Reviews</h3>
         <p>Your plan grows with you. We revisit your coverage as life changes to keep it working hard for you.</p>
       </div>
@@ -327,21 +369,20 @@
 <!-- JOIN / RECRUIT -->
 <section class="recruit" id="join">
   <div class="wrap">
-    <div class="section-head center">
+    <div class="section-head">
       <p class="eyebrow">Build a career with me</p>
-      <h2>Become a financial services agent</h2>
+      <h2>Become a financial services advisor</h2>
       <p>If you're motivated, coachable, and want to help people while building real income, I'll show you the path &mdash; from licensing to your first clients and beyond.</p>
     </div>
     <div class="steps">
       <div class="step"><div class="num">01</div><h4>Connect</h4><p>Book a no-obligation call to see if it's the right fit for your goals.</p></div>
-      <div class="step"><div class="num">02</div><h4>Get Licensed</h4><p>Follow a clear, supported process to become a licensed agent.</p></div>
+      <div class="step"><div class="num">02</div><h4>Get Licensed</h4><p>Follow a clear, supported process to become a licensed advisor.</p></div>
       <div class="step"><div class="num">03</div><h4>Train &amp; Launch</h4><p>Learn the products, the process, and how to serve clients with confidence.</p></div>
       <div class="step"><div class="num">04</div><h4>Grow</h4><p>Build your client base and team with ongoing mentorship and support.</p></div>
     </div>
-    <div class="recruit-cta">
-      <a class="btn btn-gold" href="#contact">Start the conversation</a>
-    </div>
+    <div class="recruit-cta"><a class="btn btn-gold" href="#contact">Start the conversation</a></div>
   </div>
+  <svg class="range"><use href="#rangeDark"/></svg>
 </section>
 
 <!-- CONTACT -->
@@ -349,45 +390,47 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Get in touch</p>
-      <h2>Let's talk &mdash; it's free and there's no pressure</h2>
+      <h2>Let's talk — it's free and there's no pressure</h2>
       <p>Tell me a little about what you're looking for and I'll reach out to set up a time.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <p>Reach out directly or send a message and I'll get back to you within one business day.</p>
+        <p class="intro">Reach out directly or send a message and I'll get back to you within one business day.</p>
         <ul class="contact-list">
-          <li><span class="ci">📞</span><div><b>Phone</b><span>[ Add phone number ]</span></div></li>
-          <li><span class="ci">✉️</span><div><b>Email</b><span>[ Add email address ]</span></div></li>
-          <li><span class="ci">📅</span><div><b>Schedule</b><span>[ Add Calendly / booking link ]</span></div></li>
-          <li><span class="ci">📍</span><div><b>Serving</b><span>Families nationwide &middot; Pacific Ridgeway Insurance</span></div></li>
+          <!-- PHONE: replace text below with the real number, e.g.
+               <a href="tel:+15551234567">(555) 123-4567</a> -->
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><b>Phone</b><span>[ Add phone number ]</span></div></li>
+          <!-- EMAIL: replace text below with the real address, e.g.
+               <a href="mailto:joshua@example.com">joshua@example.com</a> -->
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 6 9-6"/></svg></span><div><b>Email</b><span>[ Add email address ]</span></div></li>
+          <!-- BOOKING: replace text below with the real link, e.g.
+               <a href="https://calendly.com/your-handle" target="_blank" rel="noopener">Book a time on my calendar</a> -->
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><b>Schedule</b><span>[ Add Calendly / booking link ]</span></div></li>
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Serving</b><span>Families nationwide &middot; Pacific Ridgeway Insurance</span></div></li>
         </ul>
       </div>
-      <form onsubmit="handleSubmit(event)">
-        <div class="field">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" required placeholder="Jane Doe" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="jane@email.com" />
-        </div>
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
-        </div>
-        <div class="field">
-          <label for="reason">I'm interested in</label>
+
+      <!-- ======================================================================
+           CONTACT FORM — connected to Formspree.
+           TO ACTIVATE: replace YOUR_FORM_ID in the action="" attribute with your
+           Formspree form ID (looks like: xmyzabcd). Until then, the form shows a
+           friendly "not connected yet" note instead of failing silently.
+      ======================================================================= -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="_subject" value="New inquiry from joshuamccreary.com" />
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" required placeholder="Jane Doe" /></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="jane@email.com" /></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" /></div>
+        <div class="field"><label for="reason">I'm interested in</label>
           <select id="reason" name="reason">
             <option>Life insurance / financial review</option>
-            <option>Becoming an agent</option>
+            <option>Becoming an advisor</option>
             <option>Something else</option>
           </select>
         </div>
-        <div class="field">
-          <label for="msg">Message</label>
-          <textarea id="msg" name="msg" placeholder="A few words about what you're looking for..."></textarea>
-        </div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="A few words about what you're looking for..."></textarea></div>
         <button class="btn btn-gold" type="submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -395,11 +438,21 @@
 
 <!-- FOOTER -->
 <footer>
+  <svg class="foot-range"><use href="#rangeDark"/></svg>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-brand">
-        <b>Joshua McCrary</b>
-        <p style="margin-top:6px">Life Insurance &amp; Financial Strategies<br/>Pacific Ridgeway Insurance</p>
+      <div>
+        <div class="foot-brand">
+          <svg class="prm" viewBox="0 0 84 60" aria-hidden="true">
+            <path d="M4 56 L24 20 L33 33 L46 8 L60 30 L69 20 L80 56 Z" fill="#D4A12B"/>
+            <path d="M46 8 L51 16 L48 17.5 L46 13 L44 17.5 L41 16 Z" fill="#fff"/>
+            <path d="M24 20 L28.5 27 L26 28.5 L24 24.5 L22 28.5 L19.5 27 Z" fill="#fff"/>
+            <path d="M69 20 L73.5 27 L71 28.5 L69 24.5 L67 28.5 L64.5 27 Z" fill="#fff"/>
+          </svg>
+          <b>Pacific Ridgeway</b>
+        </div>
+        <p>Life Insurance &amp; Financial Strategies<br/>Pacific Ridgeway Insurance</p>
+        <div class="stars" style="margin-top:10px">★ ★ ★</div>
       </div>
       <div class="foot-links">
         <a href="#about">About</a>
@@ -410,7 +463,11 @@
     </div>
     <p class="disclaimer">
       &copy; <span id="yr"></span> Joshua McCrary. All rights reserved. Joshua McCrary is an independent licensed insurance professional affiliated with Pacific Ridgeway Insurance.
-      This website is for general informational purposes only and does not constitute financial, tax, or legal advice. Insurance products are subject to eligibility, underwriting, and approval; product availability and features vary by state and carrier. Income as an agent is not guaranteed and depends on individual effort, licensing, and results. Please replace bracketed placeholders with your verified contact details and any required state-specific disclosures or license numbers before publishing.
+      This website is for general informational purposes only and does not constitute financial, tax, or legal advice. Insurance products are subject to eligibility, underwriting, and approval; product availability and features vary by state and carrier. Income as an advisor is not guaranteed and depends on individual effort, licensing, and results.
+      <!-- LICENSE / DISCLOSURES: add required state insurance license number(s) and
+           state-specific disclosures here before actively promoting the site, e.g.
+           "Licensed in [State] — License #[0000000]." -->
+      Please replace bracketed placeholders with your verified contact details and any required state-specific disclosures or license numbers before publishing.
     </p>
   </div>
 </footer>
@@ -420,9 +477,23 @@
   var nav = document.getElementById('nav');
   document.getElementById('menuBtn').addEventListener('click', function(){ nav.classList.toggle('open'); });
   nav.addEventListener('click', function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+
   function handleSubmit(e){
     e.preventDefault();
-    alert("Thanks! Your message is ready to send.\n\nNote: connect this form to email or a form service (e.g. Formspree) before going live so submissions reach Joshua.");
+    var form = e.target, status = document.getElementById('formStatus');
+    if (form.action.indexOf('YOUR_FORM_ID') !== -1){
+      status.className = 'form-status info';
+      status.textContent = "This form isn't connected yet. Add your Formspree form ID in index.html to start receiving messages.";
+      return;
+    }
+    status.className = 'form-status info';
+    status.textContent = "Sending…";
+    fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+      .then(function(res){
+        if (res.ok){ form.reset(); status.className='form-status ok'; status.textContent="Thank you! Your message has been sent — I'll get back to you within one business day."; }
+        else { status.className='form-status err'; status.textContent="Sorry, something went wrong. Please email me directly and I'll respond right away."; }
+      })
+      .catch(function(){ status.className='form-status err'; status.textContent="Sorry, something went wrong. Please email me directly and I'll respond right away."; });
   }
 </script>
 </body>
