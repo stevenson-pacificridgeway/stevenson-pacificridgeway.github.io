@@ -197,6 +197,12 @@
   .brand .txt b{font-family:"Cinzel",Georgia,serif;text-transform:uppercase;letter-spacing:.07em;font-size:1rem;font-weight:700}
   .brand .txt .lstars{display:block;color:var(--gold);font-size:.6rem;letter-spacing:.34em;text-transform:none;margin-top:3px}
   .foot-brand b{font-family:"Cinzel",Georgia,serif;text-transform:uppercase;letter-spacing:.06em}
+  .pr-logo{height:46px;width:auto;display:block}
+  .pr-logo-foot{height:56px;width:auto;display:block}
+  .advisor{display:flex;align-items:center;gap:12px;margin-top:20px}
+  .advisor img{width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.55)}
+  .advisor b{color:#fff;font-size:.92rem;display:block;line-height:1.2}
+  .advisor span{color:#cdd6e8;font-size:.76rem}
 </style>
 </head>
 <body>
@@ -219,13 +225,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <svg class="prm" viewBox="0 0 100 64" aria-hidden="true">
-        <path d="M3 60 L20 34 L30 44 L42 22 L52 8 L64 30 L74 20 L88 40 L97 60 Z" fill="#082B63"/>
-        <path d="M52 8 L58 18 L54.5 19.6 L52 14 L49 20 L45 16.8 Z" fill="#fff"/>
-        <path d="M74 20 L79 28 L76 29.6 L74 25 L71.5 30 L68 27 Z" fill="#fff"/>
-        <path d="M42 22 L47 30 L44 31.6 L42 27 L39.5 32 L36 29 Z" fill="#fff"/>
-      </svg>
-      <span class="txt"><b>Pacific Ridgeway</b><span class="lstars">&#9733; &#9733; &#9733;</span></span>
+      <img class="pr-logo" src="/pr-logo-navy.png" alt="Pacific Ridgeway Insurance" />
     </a>
     <nav id="nav">
       <ul>
@@ -309,9 +309,7 @@
            A 4:5 portrait (~800x1000px) looks best.
       ===================================================================== -->
       <!-- <img src="joshua.jpg" alt="Joshua McCrary, Pacific Ridgeway Insurance" /> -->
-      <div class="mono">JM</div>
-      <svg class="pkrange"><use href="#rangeDark"/></svg>
-      <span class="ph">[ Add Joshua's professional photo here ]</span>
+      <img src="/joshua.jpg" alt="Joshua McCrary, Pacific Ridgeway Insurance" />
     </div>
     <div>
       <p class="eyebrow">About Joshua</p>
@@ -447,13 +445,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <svg class="prm" viewBox="0 0 100 64" aria-hidden="true">
-            <path d="M3 60 L20 34 L30 44 L42 22 L52 8 L64 30 L74 20 L88 40 L97 60 Z" fill="#D4A12B"/>
-            <path d="M52 8 L58 18 L54.5 19.6 L52 14 L49 20 L45 16.8 Z" fill="#fff"/>
-            <path d="M74 20 L79 28 L76 29.6 L74 25 L71.5 30 L68 27 Z" fill="#fff"/>
-            <path d="M42 22 L47 30 L44 31.6 L42 27 L39.5 32 L36 29 Z" fill="#fff"/>
-          </svg>
-          <b>Pacific Ridgeway</b>
+          <img class="pr-logo-foot" src="/pr-logo-white.png" alt="Pacific Ridgeway Insurance" />
         </div>
         <p>Life Insurance &amp; Financial Strategies<br/>Pacific Ridgeway Insurance</p>
         <div class="stars" style="margin-top:10px">★ ★ ★</div>
